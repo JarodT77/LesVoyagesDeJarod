@@ -51,8 +51,12 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+    }
     body {
         overflow-x: hidden;
+        
     }
     .nav-links {
         flex-direction: column;
@@ -91,8 +95,8 @@ nav ul li a {
         gap: 10px; /* Réduit l'espace entre l'image et le texte */
     }
     .image-content img {
-        max-width: 90%;
-        max-height: 90%; /* Réduit la taille pour mieux s'adapter aux écrans de taille moyenne */
+        max-width: 100%;
+        max-height: 100%; /* Réduit la taille pour mieux s'adapter aux écrans de taille moyenne */
     }
     .comment-section {
         padding: 0.5rem; /* Réduit les marges sur les petits écrans */
@@ -247,7 +251,7 @@ nav ul li a {
 .comment-form button {
     align-self: flex-start; /* Garde le bouton à gauche */
     padding: 0.75rem 1.5rem;
-    background-color: #007bff;
+    background-color: #000000;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -255,5 +259,5 @@ nav ul li a {
 }
 
 .comment-form button:hover {
-    background-color: #0056b3;
+    background-color: rgb(168, 140, 28, 0.5) ;
 }
