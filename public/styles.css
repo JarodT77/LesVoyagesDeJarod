@@ -1,0 +1,259 @@
+body {
+    font-family: Josefin Sans;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    
+}
+header {
+    background-image: url('/Public/images/Background.JPEG'); 
+}
+html, body {
+    width: 100%;
+}
+
+
+.container-header {
+    align-items: center;
+    padding: 10px 20px;
+}
+.header-logo {
+    max-width: 250px;
+}
+nav{
+text-align: center;
+}
+   
+.nav-links { 
+    list-style: none;
+    
+}
+
+nav ul li {
+    display:inline;
+    margin-right: 5rem;
+   
+    
+    
+}
+
+nav ul li a {
+    color: rgb(168, 140, 28);
+    text-decoration: none;
+    font-size: x-large;
+}
+.burger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(168, 140, 28);
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: -16px;
+        left: 0;
+        background-color: #000000bb;
+        width: 200px;
+        height: 40vh;
+        padding: 20px;
+        display: none;
+    }
+    
+
+    .nav-links.active {
+        display: flex; /* Afficher le menu lorsqu'il est actif */
+    }
+
+    .burger {
+        display: block;
+
+    left:10rem;
+        position:relative; /* Afficher le menu burger en mobile */
+    }
+    nav ul li {
+        margin-bottom: 2rem;
+    }
+       
+    .header-logo {
+        max-width: 250px;
+    }
+    .container-page {
+        flex-direction: column; /* Aligne l'image et le texte verticalement */
+        margin-left: 1rem;
+        margin-right: 1rem;
+        gap: 10px; /* Réduit l'espace entre l'image et le texte */
+    }
+    .image-content img {
+        max-width: 90%;
+        max-height: 90%; /* Réduit la taille pour mieux s'adapter aux écrans de taille moyenne */
+    }
+    .comment-section {
+        padding: 0.5rem; /* Réduit les marges sur les petits écrans */
+    }
+
+    .comment-form form {
+        width: 100%;
+    }
+}
+
+
+.container {
+    border-bottom: 3px solid black;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    max-width: 100%;
+}
+.container-page {
+    border-bottom: 3px solid black;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center; /* Pour aligner verticalement le texte avec l'image */
+    gap: 20px; /* Espace entre l'image et le texte */
+}
+
+.container-menu {
+    text-align: center;
+    
+}
+.container-menu h3 {
+   color: rgb(168, 140, 28);
+}
+.container-images {
+    display: flex; /* Active le modèle flexbox */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Aligne les éléments verticalement */
+    gap: 80px; /* Espace entre les images, ajustable */
+    margin-top: 20px; /* Espace en haut */
+    flex-wrap: wrap;
+}
+ .image-size {
+    max-width: 300px;
+    height: auto;
+ }
+ .container-button {
+    background-color: rgb(168, 140, 28, 0.5);
+    padding:1rem;
+ }
+ .button {
+    text-decoration: none;
+    color:black;
+ }
+ .container-button:hover {
+    background-color: black;
+    
+ }
+ .container-button:hover .button {
+    color: white; 
+    text-decoration: none;
+ }
+
+ .content {
+    text-align: center;
+    margin:4rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+ }
+.container-footer {
+    padding-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+ .content h3 {
+    color: rgb(168, 140, 28);
+ }
+ .content-footer {
+    text-align: center;
+    color: white;
+    margin:4rem;
+    padding-bottom: 2rem;
+ }
+
+ .container-content h3 {
+    color: rgb(168, 140, 28);  
+ }
+ .container-content h2 {
+   text-align: center;
+ }
+
+ .image-page {
+    max-width: 350px;
+ }
+ .container h3 {
+    color: rgb(168, 140, 28);
+ }
+
+ .image-content {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+ }
+ .image-content img {
+    max-width: 80%;
+   
+ }
+ .comment-section {
+    max-width: 100%; /* Limite la largeur de la section */
+    margin: 0 auto; /* Centrer la section sur la page */
+    padding: 1rem;
+}
+
+/* Style des commentaires */
+.comments-list .comment {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.comment-text {
+    margin: 0;
+}
+
+/* Style pour le formulaire de commentaire */
+.comment-form {
+    margin-top: 2rem;
+}
+
+.comment-form form {
+    display: flex;
+    flex-direction: column; /* Arrange les éléments en colonne */
+}
+
+.comment-form label {
+    margin-bottom: 0.5rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 90%; /* S'adapte à la largeur du conteneur */
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.comment-form button {
+    align-self: flex-start; /* Garde le bouton à gauche */
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
