@@ -1,3 +1,27 @@
+<?php
+include __DIR__ . '/../config/config.php';
+
+if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+    $nom = htmlspecialchars($_POST['nom']);
+    $commentaire = htmlspecialchars($_POST['commentaire']);
+
+    // Correction de la requête SQL en supprimant la virgule
+    $query = "INSERT INTO avis_khmer (nom, commentaire) VALUES (:nom, :commentaire)";
+    $stmt = $bdd->prepare($query);
+
+    $stmt->bindParam(':nom', $nom);
+    $stmt->bindParam(':commentaire', $commentaire);
+
+    if ($stmt->execute()) {
+        header('Location: /docs/Cambodge_page.php');
+        exit;
+    } else {
+        $message = "Erreur lors de la soumission de votre avis.";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,31 +130,22 @@
             <p>Siem Reap est bien plus qu'un simple point de départ pour les temples d'Angkor. C’est une ville qui allie parfaitement tradition et modernité, avec une culture vibrante, une scène artistique dynamique et une nature environnante à couper le souffle. Que vous soyez amateur de découvertes culturelles, passionné d’histoire, ou simplement en quête de nouvelles aventures, Siem Reap saura vous séduire par son authenticité et sa diversité.</p>
         </div>
     </div> 
-<div class="comment-section">
+    <div class="comment-section">
     <h2>Commentaires</h2>
-    
+
     <!-- Liste des commentaires existants -->
-    <div class="comments-list">
-        <div class="comment">
-            <p class="comment-author">John Doe :</p>
-            <p class="comment-text">Très bel article, j'ai adoré la lecture !</p>
-        </div>
-        <div class="comment">
-            <p class="comment-author">Jane Doe :</p>
-            <p class="comment-text">Merci pour les astuces sur Phnom Penh, elles m'ont beaucoup aidé !</p>
-        </div>
+    <div class="comments-list" id="commentaire">
     </div>
-    
-    <!-- Formulaire pour laisser un commentaire -->
+<!-- Formulaire pour laisser un commentaire -->
     <div class="comment-form">
         <h3>Laisser un commentaire</h3>
-        <form action="#" method="post">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="comment">Commentaire :</label>
-            <textarea id="comment" name="comment" rows="4" required></textarea>
-            
+        <form id="commentForm" method="POST">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="commentaire">Commentaire :</label>
+            <textarea id="commentaire" name="commentaire" rows="4" required></textarea>
+
             <button type="submit">Envoyer</button>
         </form>
     </div>
