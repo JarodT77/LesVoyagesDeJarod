@@ -14,7 +14,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
     $stmt->bindParam(':commentaire', $commentaire);
 
     if ($stmt->execute()) {
-        header('Location: /docs/Cambodge_page.php');
+        header('Location: /public/Cambodge_page.php');
         exit;
     } else {
         $message = "Erreur lors de la soumission de votre avis.";
