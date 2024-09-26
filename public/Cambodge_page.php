@@ -29,7 +29,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog voyage de Jarod</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
 </head>
 <body>
     <header>
@@ -158,6 +158,6 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
      </div>
     </div>  
 </footer>
-<script src="/docs/js/script.js"></script>
+<script src="/public/js/script.js"></script>
 </body>
 </html>
