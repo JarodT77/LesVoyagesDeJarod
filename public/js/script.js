@@ -4,7 +4,7 @@ function toggleMenu() {
     }
 // Autres fonctions ou code existant dans script.js
 
-fetch('/docs/comments.json')
+fetch('/public/comments.json')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
