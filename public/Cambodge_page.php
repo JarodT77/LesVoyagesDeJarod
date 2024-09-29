@@ -6,7 +6,6 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
     $nom = htmlspecialchars($_POST['nom']);
     $commentaire = htmlspecialchars($_POST['commentaire']);
 
-    // Correction de la requête SQL en supprimant la virgule
     $query = "INSERT INTO avis_khmer (nom, commentaire) VALUES (:nom, :commentaire)";
     $stmt = $bdd->prepare($query);
 
