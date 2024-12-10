@@ -39,7 +39,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(168, 140, 28);
+    color: rgb(252, 252, 252);
     text-decoration: none;
     font-size: x-large;
 }
@@ -49,75 +49,20 @@ nav ul li a {
     cursor: pointer;
     color: rgb(168, 140, 28);
 }
-
-@media (max-width: 768px) {
-    html {
-        overflow-x: hidden;
-    }
-    body {
-        overflow-x: hidden;
-        
-    }
-    .nav-links {
-        flex-direction: column;
-        position: absolute;
-        top: -16px;
-        left: 0;
-        background-color: #000000bb;
-        width: 200px;
-        height: 40vh;
-        padding: 20px;
-        display: none;
-    }
-    
-
-    .nav-links.active {
-        display: flex; /* Afficher le menu lorsqu'il est actif */
-    }
-
-    .burger {
-        display: block;
-
-    left:10rem;
-        position:relative; /* Afficher le menu burger en mobile */
-    }
-    nav ul li {
-        margin-bottom: 2rem;
-    }
-       
-    .header-logo {
-        max-width: 250px;
-    }
-    .container-page {
-        flex-direction: column; /* Aligne l'image et le texte verticalement */
-        margin-left: 1rem;
-        margin-right: 1rem;
-        gap: 10px; /* Réduit l'espace entre l'image et le texte */
-    }
-    .image-content img {
-        max-width: 100%;
-        max-height: 100%; /* Réduit la taille pour mieux s'adapter aux écrans de taille moyenne */
-    }
-    .comment-section {
-        padding: 0.5rem; /* Réduit les marges sur les petits écrans */
-    }
-
-    .comment-form form {
-        width: 100%;
-    }
+p {
+    font-size: large;
 }
-
 
 .container {
     border-bottom: 3px solid black;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
     max-width: 100%;
 }
 .container-page {
     border-bottom: 3px solid black;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
     max-width: 100%;
     display: flex;
     align-items: center; /* Pour aligner verticalement le texte avec l'image */
@@ -228,6 +173,8 @@ nav ul li a {
 /* Style pour le formulaire de commentaire */
 .comment-form {
     margin-top: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
 .comment-form form {
@@ -261,3 +208,101 @@ nav ul li a {
 .comment-form button:hover {
     background-color: rgb(168, 140, 28, 0.5) ;
 }
+
+
+.comment-section h2 {
+    color: rgb(168, 140, 28);
+    text-align: center;  
+}
+
+/* Style général pour la liste des commentaires */
+.comments-list {
+    border-radius: 5px; 
+    margin-left: 10rem;
+    margin-right:10rem;               
+}
+
+.content {
+    text-align: center;
+    margin: 4rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0rem;
+}
+
+
+
+@media (max-width: 480px) {
+    html {
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+        
+    }
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: -16px;
+        left: 0;
+        background-color: #000000bb;
+        width: 200px;
+        height: 40vh;
+        padding: 20px;
+        display: none;
+    }
+    
+
+    .nav-links.active {
+        display: flex; /* Afficher le menu lorsqu'il est actif */
+    }
+
+    .burger {
+        display: block;
+
+    left:10rem;
+        position:relative; /* Afficher le menu burger en mobile */
+    }
+    nav ul li {
+        margin-bottom: 2rem;
+    }
+       
+    .header-logo {
+        max-width: 250px;
+    }
+    
+    .container-page {
+        flex-direction: column; /* Aligne l'image et le texte verticalement */
+        margin-left: 4rem;
+        margin-right: 4rem;
+        gap: 10px; /* Réduit l'espace entre l'image et le texte */
+    }
+    .container {
+        flex-direction: column;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        gap: 10px; 
+
+    }
+    .image-content img {
+        max-width: 100%;
+        max-height: 100%; /* Réduit la taille pour mieux s'adapter aux écrans de taille moyenne */
+    }
+    .comment-section {
+        padding: 0.5rem; /* Réduit les marges sur les petits écrans */
+    }
+    .comment-form {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .comment-form form {
+        width: 100%;
+    }
+    .comments-list {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+
+
